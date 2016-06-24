@@ -5,10 +5,6 @@ angular.module('flapperNews')
   function($scope, $stateParams, posts){
     $scope.post = posts.posts[$stateParams.id];
 
-    $scope.incrementUpvotes = function(post) {
-      post.upvotes += 1;
-    };
-
     $scope.addComment = function(){
       if($scope.body === '') { return; }
       $scope.post.comments.push({
@@ -17,6 +13,9 @@ angular.module('flapperNews')
         upvotes: 0
       });
       $scope.body = '';
+    };
+    $scope.incrementUpvotes = function(comment) {
+      posts.upvotes(post);
     };
   }
 ]);
