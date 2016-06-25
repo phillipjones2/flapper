@@ -1,5 +1,4 @@
-angular.module('flapperNews')
-.controller('MainCtrl', [
+myApp.controller('MainCtrl', [
   '$scope',
   'posts',
   function($scope, posts){
