@@ -1,0 +1,41 @@
+<div class="jumbotron">
+  <div class="col-xs-offset-3" style="padding-top:-10px;">
+    <h2>Cream Rises</h2>
+
+
+
+    <form ng-submit="addComment()"
+      style="margin-top:30px;">
+      <h3>Add comment to
+        <a ng-show="post.link" href="{{post.link}}">
+          {{post.title}}
+        </a>
+        <span ng-hide="post.link">
+          {{post.title}}
+        </span>
+      </h3>
+      <div class="row">
+      <div class="form-group col-sm-8">
+        <input type="text"
+        class="form-control"
+        placeholder="Comment"
+        ng-model="body"></input>
+      </div>
+    </div>
+      <button type="submit" class="btn btn-primary">Post</button>
+      <a href="#/home" class="btn btn-primary">Back</a>
+    </form>
+  </div>
+</div>
+
+<div class="row">
+  <div class=" col-xs-8 col-xs-offset-2 col-sm-7 col-sm-offset-3">
+    <div ng-repeat="comment in post.comments | orderBy:'-upvotes'">
+      <span class="fa fa-thumbs-up" aria-hidden="true"
+        ng-click="incrementUpvotes(comment)"></span>
+        {{comment.upvotes}} - by {{comment.user.username}}
+      <span style="font-size:20px; margin-left:10px;">
+        {{comment.body}}</span>
+    </div>
+  </div>
+</div>
