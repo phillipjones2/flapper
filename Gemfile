@@ -15,7 +15,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'angular-rails-templates'
 gem 'responders', '~> 2.0'
 gem 'angular_rails_csrf'
-
+gem 'devise', '~> 3.4.0'
 
 
 # bundle exec rake doc:rails generates the API under doc/api.

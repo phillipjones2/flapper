@@ -1,5 +1,4 @@
-angular.module('flapperNews')
-.factory('posts', [
+myApp.factory('posts', [
   '$http',
   function($http){
   var o = {
