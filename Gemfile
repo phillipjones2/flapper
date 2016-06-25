@@ -18,6 +18,7 @@ gem 'angular_rails_csrf'
 gem 'devise', '~> 3.4.0'
 gem 'figaro', '~> 0.7.0'
 gem "font-awesome-rails"
+gem 'angular-ui-bootstrap-rails'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc

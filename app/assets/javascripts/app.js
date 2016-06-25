@@ -1,7 +1,8 @@
 var myApp = angular.module('flapperNews', [
   'ui.router',
   'templates',
-  'Devise'
+  'Devise',
+  'ui.bootstrap'
 ]);
 myApp.config([
   '$stateProvider',
